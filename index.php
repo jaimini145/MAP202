@@ -1,8 +1,12 @@
 <html>
-<body>
-<h1>
-This is my Lab 3
-</h1>
-<a href='form.php'> Click here to open Lab 3 </a>
-</body>
+	
+	<body>
+		
+		<h1>
+			Lab 4
+		</h1>
+		<a href='login.php'> Click on Lab 4 </a>
+		
+	</body>
+	
 </html>
