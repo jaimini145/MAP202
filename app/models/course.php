@@ -46,6 +46,15 @@ class Course{
  			$rows = $statement->fetchAll(PDO::FETCH_ASSOC);
  			return $rows;
  		}
+	//submit_index
+	public function submit_index($courseId,$courseName,$Department,$Program)
+		{
+			$db = db_connect(); 
+            $statement=$db->prepare("INSERT INTO courses (courseId,courseName,Department,Program) VALUES ('$courseId', '$courseName','$Department','$Program')");  
+            $statement->execute();
+            $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $rows;
+		}
 	
 	
  	}

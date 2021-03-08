@@ -8,6 +8,10 @@
 		
 	</div>
 </div>
+<br>
+	 <div class="row">
+		<a class="design" href="/courses/insert" title="Return to the previous page"> Insert Data</a> 
+	 </div>
 
 	
  <?php require_once 'app/views/templates/footer.php' ?>

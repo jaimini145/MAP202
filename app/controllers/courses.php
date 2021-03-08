@@ -25,6 +25,18 @@ class courses extends Controller {
 		die;
 	}
 		
+	public function submit_insert(){
 
+		$courseId = $_POST['courseId'];
+		$courseName =$_POST['courseName'];
+		$Department = $_POST['Department'];
+		$Program = $_POST['Program'];
+
+		$course = $this->model('Course');
+		$this->$course->submit_index($courseId,$courseName,$Department,$Program);
+		echo $courseName;
+		$this->view('courses/index');
+		die;
+		}
  	}
  ?>  
