@@ -17,17 +17,10 @@ class User {
          */
 		$username = strtolower($username);
 		$db = db_connect();
-        $statement = $db->prepare("select * from users
-                                WHERE username = :name;
-                ");
-        $statement->bindValue(':name', $username);
+        $statement = $db->prepare("SELECT * FROM users where username = :username");
+        $statement->bindValue(':username', $username);
         $statement->execute();
         $rows = $statement->fetch(PDO::FETCH_ASSOC);
-		
-		//$stmt = $conn->prepare($query);
-		//$stmt->bindParam(':username',$username);
-        //$stmt->execute();
-		//$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		
 		if (password_verify($password, $rows['password'])) {
 			$_SESSION['auth'] = 1;
