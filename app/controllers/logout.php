@@ -3,10 +3,9 @@
 class Logout extends Controller {
 
     public function index() {		
-	    //destroy session and redirect to login page
+	    $_SESSION = array();
 		session_destroy();
-		header('location:/login');
+		header ('Location:/login');
 		die;
     }
-
 }

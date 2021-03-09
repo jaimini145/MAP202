@@ -19,6 +19,3 @@ define('DB_USER',         'dCObw8t2lg');
 define('DB_PASS',         'ubV1tmbof5');
 define('DB_DATABASE',     'dCObw8t2lg');
 define('DB_PORT',         '');
-
-
-

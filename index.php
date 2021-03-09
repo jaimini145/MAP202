@@ -1,12 +1,13 @@
+<!DOCTYPE HTML>
 <html>
+<body>
 	
-	<body>
-		
-		<h1>
-			Lab 4
-		</h1>
-		<a href='login.php'> Click on Lab 4 </a>
-		
-	</body>
+ <a href='register'>Click here for log in </a> 
 	
-</html>
+    </body>
+</html> 
+<?php 
+
+require_once 'app/init.php';
+
+$app = new App;
