@@ -2,41 +2,28 @@
 class courses extends Controller {
 
     public function index() {	
-		$course =$this->model('Course');
-		$department = $course->get_all_departments();
-		$programs = $course->get_all_programs();
- 	    $this->view('courses/index', ['departments' => $departments, 'programs'=>$programs]);
+		$course = $this->model('Course');
+ 		$departments = $course->get_all_departments();
+		
+ 	    $this->view('courses/departments',['departments' => $departments]);
  		die;
     }
 	
-	
 	public function display ($department = null, $program = null) {
- 		if($department && $program == null) {
+		if($program) {
  			$course = $this->model('Course');
-		}
-		
-	public function display ($department = null, $program = null) {
+ 			$courseList =  $course->get_all_courses($program);
+ 			$this->view('courses/courses', ['courses' => $courseList ]);
  			die;
- 		}
- 	}
-		
-	public function insert() {
-		$this->view('courses/insert');
-		die;
 	}
-		
-	public function submit_insert(){
+		if($department){
+ 			$course = $this->model('Course');
+ 			$programs =  $course->get_all_programs($department);
+			//print_r ($programs); die; 
+ 			$this->view('courses/programs', ['programs' => $programs]);
+ 			die;
 
-		$courseId = $_POST['courseId'];
-		$courseName =$_POST['courseName'];
-		$Department = $_POST['Department'];
-		$Program = $_POST['Program'];
-
-		$course = $this->model('Course');
-		$this->$course->submit_index($courseId,$courseName,$Department,$Program);
-		echo $courseName;
-		$this->view('courses/index');
-		die;
-		}
- 	}
- ?>  
+ 		}
+	}
+} 
+?>

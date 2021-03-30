@@ -2,8 +2,8 @@
 <html>
 <body>
 	
- <a href='register'>Click here for log in </a> 
-	
+ <!--<a href='register'>Click here for log in </a> 
+	-->
     </body>
 </html> 
 <?php 
