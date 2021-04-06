@@ -27,6 +27,7 @@ class User {
 			$_SESSION['username'] = ucwords($username);
 			unset($_SESSION['failedAuth']);
 			header('Location: /home');
+			$_SESSION['permissions'] = $this-> get_permissions($rows['permissionID']);
 			die;
 		} else {
 			if(isset($_SESSION['failedAuth'])) {
@@ -38,5 +39,16 @@ class User {
 			die;
 		}
     }
-   
+   public function get_permissions($permissionid)
+    {
+        $db = db_connect();
+        $statement = $db->prepare('select * from permissions
+                                WHERE permissionID = :permissionid;');
+        $statement->bindValue(':permissionid', $permissionid);
+        $statement->execute();
+        $rows = $statement->fetch(PDO::FETCH_ASSOC);
+      
+        return $rows;
+    }
+	
 }

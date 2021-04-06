@@ -13,10 +13,9 @@ public function signup(){
 	$model = $this->model('UserRegister');
 	$count = $model->check_user($username);
 	if($count > 0){
-	echo 'User Already Exists<br>
-	<br>
-	<button type="button" value="button" name="submit" onClick="javascript:history.go(-1)">Go Back</button>';
+	echo 'User Already Exists<br><br><button type ="button" value="button" name="submit" onClick="javascript:history.go(-1) 	">Go Back</button>';
 	}
+	
 	else
 	{
 	

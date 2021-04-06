@@ -1,9 +1,3 @@
-<?php
-
-if (!isset($_SESSION['auth']) == 1) {
-   header('Location: /login');
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,6 +33,12 @@ if (!isset($_SESSION['auth']) == 1) {
         <a class="nav-link" href="/courses">Courses</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="/manager">Manager</a>
+      </li>
+		<li class="nav-item">
+        <a class="nav-link" href="/staff">Staff</a>
+      </li>
+		<li class="nav-item">
         <a class="nav-link" href="/logout">Logout</a>
       </li>
       

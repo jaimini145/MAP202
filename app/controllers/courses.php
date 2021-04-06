@@ -2,6 +2,7 @@
 class courses extends Controller {
 
     public function index() {	
+		check_permissions();
 		$course = $this->model('Course');
  		$departments = $course->get_all_departments();
 		
