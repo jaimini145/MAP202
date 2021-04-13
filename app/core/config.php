@@ -19,3 +19,8 @@ define('DB_USER',         'dCObw8t2lg');
 define('DB_PASS',         'ubV1tmbof5');
 define('DB_DATABASE',     'dCObw8t2lg');
 define('DB_PORT',         '');
+
+define('API_KEY',         'a1b8a93b2caa33301f5c38d582492d52');
+
+
+
